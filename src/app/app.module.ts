@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from 'environments/environment';
 import { ROUTES } from './app.routes';
 import { SuiModule } from 'ng2-semantic-ui';
+import { SharedModule } from './shared/shared.module';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
@@ -23,11 +24,13 @@ import { DevModuleModule } from './+dev-module';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
+import { BookService } from './services/book.service';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
-  AppState
+  AppState,
+  BookService
 ];
 
 interface StoreType {
@@ -52,6 +55,7 @@ interface StoreType {
    * Import Angular's modules.
    */
   imports: [
+    SharedModule,
     SuiModule,
     BrowserModule,
     BrowserAnimationsModule,

@@ -1,0 +1,20 @@
+<!--app-loading [condition]="isLoading"></app-loading-->
+<div class="ui middle aligned stackable grid container">
+    <div class="row">
+        <div class="center aligned column">
+            <div class="ui six stackable cards">
+                <div *ngFor="let book of books" class="ui fluid card">
+                  <a class="image" [routerLink]=" ['./book-detail'] ">
+                    <div class="ui red right corner label">
+                        <i class="heart icon"></i>
+                    </div>
+                    <img class="image visible" src="{{ book.cover }}">
+                  </a>
+                  <div class="header">
+                    {{ book.title }}
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

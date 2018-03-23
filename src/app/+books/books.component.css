@@ -1,0 +1,12 @@
+.row .cards .card .header {
+  overflow: hidden;
+  height: 20px;
+  margin-top: -20px;
+  z-index: 99;
+  background-color: #0c0c0cad;
+  color: white;
+}
+
+.row .cards .card .image {
+  height: 100%;
+}

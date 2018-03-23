@@ -19,11 +19,11 @@ import { AppState } from './app.service';
     <nav class="ui secondary menu">
       <a class="item" [routerLink]=" ['./'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Index
+        Trang chủ
       </a>
-      <a class="item" [routerLink]=" ['./home'] "
+      <a class="item" [routerLink]=" ['./books'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Home
+        Books
       </a>
       <a class="item" [routerLink]=" ['./detail'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
@@ -59,22 +59,13 @@ import { AppState } from './app.service';
     </main>
 
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
-    <footer>
-      <span>Angular Starter by <a [href]="twitter">@gdi2290</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="tipe" width="25%">
-        </a>
-      </div>
-    </footer>
   `
 })
 export class AppComponent implements OnInit {
-  public name = 'Angular Starter';
+  public name = 'FoxReader';
   public tipe = 'assets/img/tipe.png';
   public twitter = 'https://twitter.com/gdi2290';
-  public url = 'https://tipe.io';
+  public url = 'https://ez-connect.net';
   public showDevModule: boolean = environment.showDevModule;
 
   constructor(
