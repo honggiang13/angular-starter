@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  */
 import { environment } from 'environments/environment';
 import { ROUTES } from './app.routes';
+import { SuiModule } from 'ng2-semantic-ui';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
@@ -51,6 +52,7 @@ interface StoreType {
    * Import Angular's modules.
    */
   imports: [
+    SuiModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,

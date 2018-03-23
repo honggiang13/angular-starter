@@ -16,24 +16,24 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    <nav>
-      <a [routerLink]=" ['./'] "
+    <nav class="ui secondary menu">
+      <a class="item" [routerLink]=" ['./'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         Index
       </a>
-      <a [routerLink]=" ['./home'] "
+      <a class="item" [routerLink]=" ['./home'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         Home
       </a>
-      <a [routerLink]=" ['./detail'] "
+      <a class="item" [routerLink]=" ['./detail'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         Detail
       </a>
-      <a [routerLink]=" ['./barrel'] "
+      <a class="item" [routerLink]=" ['./barrel'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         Barrel
       </a>
-      <a [routerLink]=" ['./about'] "
+      <a class="item" [routerLink]=" ['./about'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         About
       </a>
@@ -41,6 +41,17 @@ import { AppState } from './app.service';
          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         DevModule
       </a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+        <a class="ui item">
+          Logout
+        </a>
+      </div>
     </nav>
 
     <main>
